@@ -1,0 +1,18 @@
+User-agent: Baiduspider
+Disallow: /plus/
+Disallow: /include
+Disallow: /templets
+
+User-agent: Sosospider
+Disallow: /plus/
+Disallow: /include
+Disallow: /templets
+
+User-agent: sogou spider
+Disallow: /plus/
+Disallow: /include
+Disallow: /templets
+
+User-agent: *
+Disallow: /
+http://www.07ylw.com/sitemap.xml

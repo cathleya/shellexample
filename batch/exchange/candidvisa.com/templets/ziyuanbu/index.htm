@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html mip lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<title>{dede:global.cfg_indextitle/}</title>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<link href="{dede:global.cfg_jinni8skins/}/css/css.css" rel="stylesheet" />
+<link href="{dede:global.cfg_jinni8skins/}/fonts/style.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
+<link rel="canonical" href="{dede:global.cfg_jinni8host/}/">
+<script async src="https://c.mipcdn.com/static/v1/mip-nav-slidedown/mip-nav-slidedown.js"></script>
+<script type="application/ld+json">
+        {
+            "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+            "@id": "{dede:global.cfg_jinni8host/}/",
+            "appid": "{dede:global.cfg_baiduxiongzhang/}",
+            "title": "{dede:global.cfg_webname/}",
+            "images": [
+                ""
+            ],
+            "pubDate": "{dede:sql sql="select pubdate from #@__archives order by pubdate desc limit 1"}[field:pubdate function="MyDate('Y-m-d',@me)"/]T[field:pubdate function="MyDate('H:i:s',@me)"/]{/dede:sql}"
+        }
+</script>
+</head>
+<body>
+{dede:include filename="header.htm"/}
+<section class="ytvbekex yhtjdsbd">
+	<div class="ifwlqotb kcymtdfu">
+    	<div class="pkglfmmj">
+            <mip-carousel autoplay defer="2000" layout="responsive"  width="820"  height="200" indicator indicatorId="mip-carousel-example" buttonController>
+				{dede:sql sql="select * from #@__addon17 where typeid='12' ORDER BY xu"}
+                <a href="[field:url/]"><mip-img src="[field:litpic/]" alt="[field:title/]"></mip-img></a>
+				{/dede:sql}
+            </mip-carousel>
+            <div class="mip-carousel-indicator-wrapper">
+                <div class="mip-carousel-indicatorDot" id="mip-carousel-example">
+                    <div class="mip-carousel-activeitem mip-carousel-indecator-item"></div>
+                    <div class="mip-carousel-indecator-item"></div>
+                    <div class="mip-carousel-indecator-item"></div>
+                </div>
+            </div>        
+        </div>
+        <div class="clear"></div>
+        <div class="ytvbekex ncgrlvan">
+        	<h2>最新资讯</h2>
+        </div>
+        {dede:arclist row="8"}
+        <div class="calpejby">
+        	<a href="[field:arcurl/]"><mip-img src="[field:litpic/]" alt="[field:fulltitle/]"></mip-img></a>
+        	<ul>
+            	<li><h3><a href="[field:arcurl/]">[field:fulltitle/]</a></h3></li>
+            	<li class="gxmuycmd"><i class="icon-time"></i><time>[field:pubdate function="Mydate('Y-m-d',@me)"/]</time><i class="icon-user"></i><span>[field:writer/]</span><i class="icon-folder"></i><span class="type"><a href="[field:typeurl/]">[field:typename/]</a></span></li>
+            	<li class="gxmuycmd">[field:description/]</li>
+            
+            </ul>
+            <div class="clear"></div>
+        </div>
+        {/dede:arclist}
+        <div class="clear"></div>
+        <div class="ypiyshnl cfvlttlc">
+        	<ul>
+            	{dede:tag row="100" sort='rand' getall='0'}
+            	<li><a href="/zhuanti/[field:tag /].html" title="[field:tag /]">[field:tag function='cn_substr(@me,10)' /]</a></li>
+                {/dede:tag}
+            </ul>
+        </div>
+    </div>
+	<div class="hzcvjcpd qvbyavff">
+	{dede:include filename="right2.htm"/}
+    </div>
+</section>
+<div class="clear"></div>
+<footer class="gxjtkuhh">
+    <ul>
+    	<li><h3>友情链接：</h3></li>
+    	<li><b><a href= http://www.057.org>57赚钱网</a></b></li>
+    </ul>
+</footer>
+{dede:jinni8_tongji}{/dede:jinni8_tongji}
+</body>
+</html>
